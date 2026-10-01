@@ -1,11 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./home";
+import About from "./About";
+import Navbar from "./Navbar";
 
-function App() {
+function App () {
   return (
-    <div>
-      <h1>My First React App</h1>
-      <h2>I am learning React.</h2>
-      
-    </div>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path = "/" element = {<Home />} />
+      <Route path = "/about" element = {<About />}/>
+       <Route path = "/navbar" element = {<Navbar />}/>
+    </Routes>
+    </BrowserRouter>
+  )
 }
 export default App;
